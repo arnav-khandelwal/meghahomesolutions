@@ -4,8 +4,8 @@
 .contact {
   @include mixins.section-padding;
   background:
-    radial-gradient(circle at top left, rgba(61, 123, 112, 0.08), transparent 34%),
-    linear-gradient(180deg, #f8faf9 0%, #eef4f2 100%);
+    radial-gradient(circle at top left, rgba(61, 123, 112, 0.18), transparent 40%),
+    linear-gradient(180deg, #e8f0ee 0%, #d6e5e1 100%);
   color: var(--color-text-dark);
 }
 

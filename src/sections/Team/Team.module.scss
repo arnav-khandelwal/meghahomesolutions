@@ -3,7 +3,9 @@
 
 .team {
   padding: var(--section-spacing) 0;
-  background: transparent;
+  background:
+    radial-gradient(circle at bottom right, rgba(61, 123, 112, 0.12), transparent 50%),
+    linear-gradient(180deg, #e4eeeb 0%, #d4e4df 100%);
 
   .container {
     @include mixins.container;

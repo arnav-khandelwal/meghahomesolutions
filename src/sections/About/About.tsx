@@ -118,8 +118,8 @@ export default function About() {
         <div className={styles.imageWrapper} ref={imageRef}>
           <div className={styles.accent} />
           <Image 
-            src="https://images.unsplash.com/photo-1628611225249-6c17e0b57e75?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-            alt="Luxurious Architecture" 
+            src="/assets/housephoto.jpg" 
+            alt="MeghaHome Property" 
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: 'cover' }}
