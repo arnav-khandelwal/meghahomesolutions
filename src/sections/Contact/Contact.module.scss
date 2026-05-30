@@ -1,0 +1,178 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mixins;
+
+.contact {
+  @include mixins.section-padding;
+  background:
+    radial-gradient(circle at top left, rgba(61, 123, 112, 0.08), transparent 34%),
+    linear-gradient(180deg, #f8faf9 0%, #eef4f2 100%);
+  color: var(--color-text-dark);
+}
+
+.container {
+  @include mixins.container;
+}
+
+.splitLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+
+  @include mixins.media-down(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  max-width: 620px;
+  margin-bottom: 0;
+  padding-top: clamp(0.25rem, 1vw, 1rem);
+}
+
+.subtitle {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-teal);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.subtitleText {
+  color: rgba(31, 41, 55, 0.82);
+  font-size: var(--font-body-large);
+  line-height: 1.8;
+  max-width: 64ch;
+}
+
+.title {
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+
+  .italic {
+    @include mixins.text-italic;
+    color: var(--color-primary-teal);
+  }
+}
+
+.formWrap {
+  max-width: 880px;
+}
+
+.form {
+  display: grid;
+  gap: var(--spacing-md);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(19, 34, 53, 0.08);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.formHeader {
+  display: grid;
+  gap: 0.35rem;
+
+  h3 {
+    color: var(--color-text-dark);
+    font-size: var(--font-h4);
+  }
+
+  p {
+    color: rgba(31, 41, 55, 0.72);
+    line-height: 1.7;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+
+  @include mixins.media-down(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.row label,
+.messageField {
+  display: grid;
+  gap: 0.5rem;
+  text-align: left;
+
+  span {
+    color: rgba(31, 41, 55, 0.78);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.fieldInput,
+.messageInput {
+  width: 100%;
+  border: 1px solid rgba(19, 34, 53, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-text-dark);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem 1.1rem;
+  font-family: var(--font-stack-body);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+
+  &::placeholder {
+    color: rgba(31, 41, 55, 0.38);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(61, 123, 112, 0.8);
+    box-shadow: 0 0 0 4px rgba(61, 123, 112, 0.12);
+    background: white;
+  }
+}
+
+.messageInput {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, var(--color-primary-teal), #69a79b);
+  color: white;
+  padding: 1rem 1.8rem;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-stack-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+  box-shadow: 0 10px 22px rgba(61, 123, 112, 0.22);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(61, 123, 112, 0.28);
+  }
+}
+
+.note {
+  color: rgba(31, 41, 55, 0.68);
+  font-size: 0.92rem;
+}
+
+.infoCard {
+  margin-top: var(--spacing-md);
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--color-primary-teal);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: var(--border-radius-sm);
+  color: rgba(31, 41, 55, 0.82);
+  box-shadow: var(--shadow-sm);
+}

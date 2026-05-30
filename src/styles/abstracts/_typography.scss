@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+@mixin heading-style($family) {
+  font-family: $family;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1, .h1 {
+  @include heading-style($font-stack-display);
+  font-size: var(--font-h1);
+}
+
+h2, .h2 {
+  @include heading-style($font-stack-serif);
+  font-size: var(--font-h2);
+}
+
+h3, .h3 {
+  @include heading-style($font-stack-display);
+  font-size: var(--font-h3);
+}
+
+h4, .h4 {
+  @include heading-style($font-stack-serif);
+  font-size: var(--font-h4);
+}
+
+p, .body-text {
+  font-family: var(--font-stack-body);
+  font-size: var(--font-body);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.body-large {
+  font-size: var(--font-body-large);
+}
+
+.text-teal {
+  color: var(--color-primary-teal);
+}
+
+.text-italic {
+  font-style: italic;
+  font-family: var(--font-stack-serif);
+}

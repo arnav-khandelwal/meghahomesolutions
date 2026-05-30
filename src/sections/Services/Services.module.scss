@@ -1,0 +1,108 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mixins;
+
+.services {
+  @include mixins.section-padding;
+  background-color: white;
+}
+
+.container {
+  @include mixins.container;
+}
+
+.header {
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+}
+
+.subtitle {
+  color: var(--color-primary-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-small);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.title {
+  .italic {
+    @include mixins.text-italic;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-md);
+  
+  @include mixins.media-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include mixins.media-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Service Card
+.card {
+  padding: var(--spacing-md);
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    font-size: var(--font-h4);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    transition: color var(--transition-medium);
+  }
+
+  p {
+    font-size: var(--font-small);
+    color: var(--color-text-dark);
+    opacity: 0.8;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary-navy);
+    transition: color var(--transition-medium);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-navy);
+    transform: translateY(100%);
+    transition: transform var(--transition-medium);
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    border-color: var(--color-primary-navy);
+    
+    &::before {
+      transform: translateY(0);
+    }
+    
+    h3, .icon, p {
+      color: white;
+    }
+  }
+}

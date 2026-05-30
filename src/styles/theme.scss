@@ -1,0 +1,41 @@
+@use './abstracts/variables' as *;
+
+:root {
+  // Colors
+  --color-primary-navy: #{$primary-navy};
+  --color-primary-teal: #{$primary-teal};
+  --color-background-light: #{$background-light};
+  --color-text-dark: #{$text-dark};
+  --color-border-light: #{$border-light};
+
+  // Typography Scale
+  --font-stack-display: #{$font-stack-display};
+  --font-stack-serif: #{$font-stack-serif};
+  --font-stack-body: #{$font-stack-body};
+
+  --font-h1: #{$font-h1};
+  --font-h2: #{$font-h2};
+  --font-h3: #{$font-h3};
+  --font-h4: #{$font-h4};
+  --font-body: #{$font-body};
+  --font-body-large: #{$font-body-large};
+  --font-small: #{$font-small};
+
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --section-spacing: #{$section-spacing};
+
+  // Transitions
+  --transition-fast: #{$transition-fast};
+  --transition-medium: #{$transition-medium};
+  --transition-slow: #{$transition-slow};
+}
+
+:root {
+  /* Hero background (set to your preferred image path, update to /assets/heroBg.jpg if available) */
+  --hero-bg: url('/assets/heroBg.jpg');
+}

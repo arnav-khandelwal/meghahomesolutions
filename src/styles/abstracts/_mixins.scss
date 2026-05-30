@@ -1,0 +1,51 @@
+@use './breakpoints' as bp;
+@use './variables' as vars;
+
+@mixin container {
+  max-width: var(--container-width, 1440px);
+  margin: 0 auto;
+  padding-left: clamp(1rem, 5vw, 4rem);
+  padding-right: clamp(1rem, 5vw, 4rem);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin absolute-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin section-padding {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+@mixin text-italic {
+  font-style: italic;
+  font-family: var(--font-stack-serif);
+}
+
+@mixin media-up($breakpoint) {
+  @include bp.media-up($breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @include bp.media-down($breakpoint) {
+    @content;
+  }
+}

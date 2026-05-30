@@ -1,0 +1,50 @@
+// Colors
+$primary-navy: #132235;
+$primary-teal: #3D7B70;
+$background-light: #F8F8F6;
+$text-dark: #1F2937;
+$border-light: #EAEAEA;
+
+// Typography Scale
+$font-stack-display: 'Clash Display', 'Satoshi', sans-serif;
+$font-stack-serif: 'Playfair Display', 'Cormorant Garamond', serif;
+$font-stack-body: 'Inter', sans-serif;
+
+$font-h1: clamp(3rem, 5vw + 1rem, 5rem);
+$font-h2: clamp(2.5rem, 4vw + 1rem, 4rem);
+$font-h3: clamp(2rem, 3vw + 1rem, 3rem);
+$font-h4: clamp(1.5rem, 2vw + 1rem, 2rem);
+$font-body: 1rem; // 16px
+$font-body-large: 1.125rem; // 18px
+$font-small: 0.875rem; // 14px
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 8rem;
+$section-spacing: clamp(4rem, 10vw, 8rem);
+
+// Layout
+$container-width: 1440px;
+$container-padding: clamp(1rem, 5vw, 4rem);
+
+// Borders & Shadows
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$shadow-sm: 0 2px 4px rgba(19, 34, 53, 0.05);
+$shadow-md: 0 4px 12px rgba(19, 34, 53, 0.08);
+$shadow-lg: 0 12px 32px rgba(19, 34, 53, 0.12);
+
+// z-index
+$z-index-back: -1;
+$z-index-base: 1;
+$z-index-nav: 50;
+$z-index-modal: 100;
+
+// Transitions
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);

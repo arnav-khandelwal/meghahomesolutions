@@ -1,0 +1,45 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mixins;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-index-nav);
+  padding: var(--spacing-sm) 0;
+}
+
+.container {
+  @include mixins.container;
+  @include mixins.flex-between;
+}
+
+.logoImage {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: none;
+  gap: var(--spacing-md);
+
+  @include mixins.media-up(md) {
+    display: flex;
+  }
+
+  a {
+    font-family: var(--font-stack-body);
+    font-size: var(--font-small);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary-navy);
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-primary-teal);
+    }
+  }
+}

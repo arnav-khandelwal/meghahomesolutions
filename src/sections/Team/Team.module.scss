@@ -1,0 +1,60 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mixins;
+
+.team {
+  padding: var(--section-spacing) 0;
+  background: transparent;
+
+  .container {
+    @include mixins.container;
+  }
+
+  .header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .subtitle {
+    color: var(--color-primary-teal);
+    font-weight: 600;
+  }
+
+  .title {
+    font-size: var(--font-h2);
+    margin-top: 0.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+
+    @include mixins.media-down(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+
+  .avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-sm);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .role {
+    display: block;
+    color: var(--color-text-dark);
+    opacity: 0.8;
+    font-size: 0.95rem;
+  }
+}

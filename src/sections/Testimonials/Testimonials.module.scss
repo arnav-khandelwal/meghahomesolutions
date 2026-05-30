@@ -1,0 +1,80 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mixins;
+
+.testimonials {
+  @include mixins.section-padding;
+  background-color: var(--color-background-light);
+}
+
+.container {
+  @include mixins.container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+
+  .subtitle {
+    color: var(--color-primary-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--font-small);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+  }
+
+  .title {
+    .italic {
+      @include mixins.text-italic;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+
+  @include mixins.media-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+
+  .quote {
+    font-size: 3rem;
+    color: var(--color-primary-teal);
+    opacity: 0.2;
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-family: var(--font-stack-serif);
+  }
+
+  p {
+    font-size: var(--font-body-large);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+  }
+
+  .author {
+    h4 {
+      font-size: var(--font-body);
+      margin-bottom: 2px;
+    }
+    
+    span {
+      font-size: var(--font-small);
+      color: var(--color-primary-teal);
+    }
+  }
+}
