@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Services.module.scss';
+import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 import { Building2, Landmark, Home, Banknote, Briefcase, FileSignature, ShieldCheck, MapPin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,9 +51,9 @@ export default function Services() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Services</span>
-          <h2 className={styles.title}>
+          <AnimatedTitle as="h2" className={styles.title}>
             Bespoke <span className={styles.italic}>Services</span> & Solutions
-          </h2>
+          </AnimatedTitle>
         </div>
         
         <div className={styles.grid}>

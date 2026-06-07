@@ -20,7 +20,7 @@
 
 .brand {
   .logoImage {
-    width: 150px;
+    width: 250px;
     height: auto;
     object-fit: contain;
     margin-bottom: var(--spacing-sm);
@@ -68,6 +68,8 @@
       opacity: 1;
       color: var(--color-primary-teal);
     }
+    /* underline contact links to indicate clickability */
+    text-decoration: underline;
   }
 }
 

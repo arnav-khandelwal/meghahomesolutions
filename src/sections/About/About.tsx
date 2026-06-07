@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import styles from './About.module.scss';
+import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,11 +88,11 @@ export default function About() {
       <div className={styles.container}>
         <div className={styles.content} ref={textRef}>
           <span className={styles.subtitle}>Our Legacy</span>
-          <h2 className={styles.title}>
+          <AnimatedTitle as="h2" className={styles.title}>
             A decade of <span className={styles.italic}>excellence</span> in 
             <br />
             <span className={styles.teal}>real estate</span>
-          </h2>
+          </AnimatedTitle>
           <p>
             At MeghaHome, we transcend traditional brokering. We curate experiences, safeguard investments, and build enduring wealth through strategic property acquisition and expert financial consulting. 
           </p>

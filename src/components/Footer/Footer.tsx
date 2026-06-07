@@ -9,14 +9,13 @@ export default function Footer() {
         <div className={styles.brand}>
           <Link href="/">
             <Image 
-              src="/assets/logo.jpeg" 
+              src="/assets/logoTransparent.png" 
               alt="MeghaHome Logo" 
-              width={180} 
-              height={60} 
+              width={1000} 
+              height={500} 
               className={styles.logoImage}
             />
           </Link>
-          <p>Elevating Real Estate & Financial Advisory to an Art Form.</p>
         </div>
         
         <div className={styles.links}>

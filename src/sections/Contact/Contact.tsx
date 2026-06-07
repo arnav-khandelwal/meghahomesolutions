@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Contact.module.scss';
+import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +39,7 @@ export default function Contact() {
         <div className={styles.splitLayout}>
           <div className={styles.header}>
             <span className={styles.subtitle}>Contact</span>
-            <h2 className={styles.title}>Ready to elevate your <span className={styles.italic}>portfolio?</span></h2>
+            <AnimatedTitle as="h2" className={styles.title}>Ready to elevate your <span className={styles.italic}>portfolio?</span></AnimatedTitle>
             <p className={styles.subtitleText}>Connect with our advisory board for customized real estate solutions and comprehensive wealth management.</p>
             <div className={styles.infoCard}>
               <p>Personal consultations, property guidance, and financial advisory tailored to your goals.</p>
@@ -46,30 +47,32 @@ export default function Contact() {
           </div>
 
           <div className={styles.formWrap} ref={formRef}>
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <div className={styles.form}>
               <div className={styles.formHeader}>
                 <h3>Start a conversation</h3>
-                <p>Share your requirements and we will respond with the right next step.</p>
+                <p>Choose your preferred channel and we'll get back to you promptly.</p>
               </div>
-              <div className={styles.row}>
-                <label>
-                  <span>Name</span>
-                  <input className={styles.fieldInput} type="text" name="name" placeholder="Your name" required />
-                </label>
-                <label>
-                  <span>Email</span>
-                  <input className={styles.fieldInput} type="email" name="email" placeholder="Email address" required />
-                </label>
-              </div>
-              <label className={styles.messageField}>
-                <span>Message</span>
-                <textarea className={styles.messageInput} name="message" placeholder="Tell us about your needs" rows={6} required />
-              </label>
+
               <div className={styles.actions}>
-                <button className={styles.submitBtn} type="submit">Send Message</button>
-                <p className={styles.note}>We usually respond within one business day.</p>
+                <a
+                  className={styles.submitBtn}
+                  href="https://wa.me/919910384484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Start conversation on WhatsApp
+                </a>
+
+                <a
+                  className={styles.submitBtn}
+                  href="mailto:sulabh@meghashomesolutionandfinancialservices.com"
+                >
+                  Email Us
+                </a>
               </div>
-            </form>
+
+              <p className={styles.note}>We usually respond within one business day.</p>
+            </div>
           </div>
         </div>
       </div>

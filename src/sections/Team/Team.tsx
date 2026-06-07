@@ -6,14 +6,14 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Team.module.scss';
+import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
-  { name: 'Megha Kapoor', role: 'Founder & CEO', img: '/assets/logo.jpeg' },
-  { name: 'Arjun Singh', role: 'Head of Sales', img: '/assets/logoTransparent.png' },
-  { name: 'Priya Verma', role: 'Finance Director', img: '/assets/logo.jpeg' },
+  { name: 'Megha Khandelwal', role: 'Co-founder', img: '/assets/logo.jpeg' },
+  { name: 'Sulabh Khandelwal', role: 'Co-founder', img: '/assets/logoTransparent.png' },
 ];
 
 export default function Team() {
@@ -48,7 +48,7 @@ export default function Team() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Our People</span>
-          <h2 className={styles.title}>The Team Behind <span className={styles.italic}>MeghaHome</span></h2>
+          <AnimatedTitle as="h2" className={styles.title}>The Team Behind <span className={styles.italic}>MeghaHome</span></AnimatedTitle>
         </div>
 
         <div className={styles.grid}>

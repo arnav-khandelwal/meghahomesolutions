@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Testimonials.module.scss';
+import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,9 +50,9 @@ export default function Testimonials() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Client Experiences</span>
-          <h2 className={styles.title}>
+          <AnimatedTitle as="h2" className={styles.title}>
             Words of <span className={styles.italic}>Acclaim</span>
-          </h2>
+          </AnimatedTitle>
         </div>
 
         <div className={styles.grid}>

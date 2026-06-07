@@ -1,0 +1,16 @@
+@use '../../styles/abstracts/variables' as *;
+
+.animatedTitle {
+  display: block;
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+
+  > span {
+    display: inline-block;
+    transform: translateY(1.6rem);
+    will-change: transform, opacity;
+  }
+}
