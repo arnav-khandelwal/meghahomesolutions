@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Hero.module.scss';
@@ -64,7 +65,7 @@ export default function Hero() {
         </p>
         
         <div className={styles.actions} ref={actionsRef}>
-          <button className={styles.primaryBtn}>Explore Properties</button>
+          <Link href="/properties" className={styles.primaryBtn}>Explore Properties</Link>
           <button className={styles.secondaryBtn}>Our Services</button>
         </div>
       </div>
