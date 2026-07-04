@@ -53,13 +53,22 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
     setIsSubmitting(true);
     
     try {
+      const payload = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        propertyName: `${property.title}, ${property.address}` || 'not given'
+      };
+      
+      console.log('Submitting data:', payload);
+      
       const response = await fetch('https://script.google.com/macros/s/AKfycbyhFhqG4tcCMFV1tYjhHPyifQpSMTq1kuUPwb7axgWhX0uTai-t4BlqugMDGhC2Hu3g/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       // Set mss cookie with value 2512 for 30 days
@@ -233,7 +242,7 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
                 WhatsApp
               </a>
               
-              <a href="mailto:sulabh@meghashomesolutionandfinancialservices.com?subject=Interest in property: ${encodeURIComponent(property.title)}" className={styles.contactButton}>
+              <a href="mailto:sulabh.hr@gmail.com?subject=Interest in property: ${encodeURIComponent(property.title)}" className={styles.contactButton}>
                 <Mail size={20} />
                 Send Email
               </a>
@@ -245,7 +254,7 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
                 </div>
                 <div className={styles.contactItem}>
                   <Mail size={18} />
-                  <span>sulabh@meghashomesolutionandfinancialservices.com</span>
+                  <span>sulabh.hr@gmail.com</span>
                 </div>
               </div>
             </div>

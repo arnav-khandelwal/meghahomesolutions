@@ -21,27 +21,27 @@ export default function Footer() {
         <div className={styles.links}>
           <h4>Locations</h4>
           <ul>
-            <li><Link href="#">Ghaziabad</Link></li>
-            <li><Link href="#">Indirapuram</Link></li>
-            <li><Link href="#">Vaishali</Link></li>
-            <li><Link href="#">Noida</Link></li>
+            <li>Ghaziabad</li>
+            <li>Indirapuram</li>
+            <li>Vaishali</li>
+            <li>Noida</li>
           </ul>
         </div>
         
         <div className={styles.links}>
           <h4>Services</h4>
           <ul>
-            <li><Link href="#">Property Buying</Link></li>
-            <li><Link href="#">Investment Consultation</Link></li>
-            <li><Link href="#">Mortgage Guidance</Link></li>
-            <li><Link href="#">Financial Planning</Link></li>
+            <li>Property Buying</li>
+            <li>Investment Consultation</li>
+            <li>Mortgage Guidance</li>
+            <li>Financial Planning</li>
           </ul>
         </div>
 
         <div className={styles.links}>
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:sulabh@meghashomesolutionandfinancialservices.com">sulabh@meghashomesolutionandfinancialservices.com</a></li>
+            <li><a href="mailto:sulabh.hr@gmail.com">sulabh.hr@gmail.com</a></li>
             <li><a href="tel:+919910384484">+91 99103 84484</a></li>
           </ul>
         </div>

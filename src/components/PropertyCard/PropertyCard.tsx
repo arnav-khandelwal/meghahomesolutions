@@ -32,7 +32,8 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   };
 
   return (
-    <div className={styles.card}>
+    <Link href={`/properties/${property.id}`} className={styles.cardLink}>
+      <div className={styles.card}>
       <div className={styles.imageCarousel}>
         <div className={styles.imageContainer}>
           <Image
@@ -121,11 +122,12 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           </div>
         )}
 
-        <Link href={`/properties/${property.id}`} className={styles.viewMoreButton}>
+        <div className={styles.viewMoreButton}>
           View Details
           <ArrowRight size={16} />
-        </Link>
+        </div>
       </div>
     </div>
+    </Link>
   );
 }

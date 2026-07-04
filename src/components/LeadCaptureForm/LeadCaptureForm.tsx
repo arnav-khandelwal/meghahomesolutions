@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { Lock, Home, CheckCircle } from 'lucide-react';
 import styles from './LeadCaptureForm.module.scss';

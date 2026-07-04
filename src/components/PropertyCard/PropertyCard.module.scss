@@ -1,6 +1,12 @@
 @use '../../styles/abstracts/variables' as *;
 @use '../../styles/abstracts/mixins' as mixins;
 
+.cardLink {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
 .card {
   background: white;
   border-radius: var(--border-radius-lg);
@@ -198,7 +204,6 @@
   font-family: var(--font-stack-body);
   font-weight: 500;
   transition: background-color var(--transition-fast);
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +211,7 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+  .cardLink:hover & {
     background-color: var(--color-primary-teal);
   }
 }

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Phone, MessageCircle, Mail } from 'lucide-react';
 import styles from './Contact.module.scss';
 import AnimatedTitle from '../../components/AnimatedTitle/AnimatedTitle';
 
@@ -56,17 +57,27 @@ export default function Contact() {
               <div className={styles.actions}>
                 <a
                   className={styles.submitBtn}
-                  href="https://wa.me/919910384484"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+919910384484"
                 >
-                  Start conversation on WhatsApp
+                  <Phone size={20} />
+                  Call Now
                 </a>
 
                 <a
                   className={styles.submitBtn}
-                  href="mailto:sulabh@meghashomesolutionandfinancialservices.com"
+                  href="https://wa.me/919910384484"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <MessageCircle size={20} />
+                  WhatsApp
+                </a>
+
+                <a
+                  className={styles.submitBtn}
+                  href="mailto:sulabh.hr@gmail.com"
+                >
+                  <Mail size={20} />
                   Email Us
                 </a>
               </div>

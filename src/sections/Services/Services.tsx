@@ -47,7 +47,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className={styles.services} ref={sectionRef}>
+    <section id="services" className={styles.services} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Services</span>

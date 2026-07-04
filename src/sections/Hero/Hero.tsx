@@ -66,7 +66,17 @@ export default function Hero() {
         
         <div className={styles.actions} ref={actionsRef}>
           <Link href="/properties" className={styles.primaryBtn}>Explore Properties</Link>
-          <button className={styles.secondaryBtn}>Our Services</button>
+          <button 
+            className={styles.secondaryBtn}
+            onClick={() => {
+              const servicesSection = document.getElementById('services');
+              if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Our Services
+          </button>
         </div>
       </div>
     </section>
