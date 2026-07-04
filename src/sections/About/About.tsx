@@ -84,7 +84,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className={styles.about} ref={sectionRef}>
+    <section id="about" className={styles.about} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.content} ref={textRef}>
           <span className={styles.subtitle}>Our Legacy</span>

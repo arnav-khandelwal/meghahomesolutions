@@ -44,7 +44,7 @@ export default function Team() {
   }, []);
 
   return (
-    <section className={styles.team} ref={sectionRef}>
+    <section id="team" className={styles.team} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Our People</span>

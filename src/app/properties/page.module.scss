@@ -4,8 +4,13 @@
 .propertiesPage {
   min-height: 100vh;
   background-color: var(--color-background-light);
-  padding-top: calc(var(--spacing-xl) + 80px);
-  padding-bottom: var(--spacing-xl);
+  padding-top: calc(var(--spacing-lg) + 60px);
+  padding-bottom: var(--spacing-lg);
+
+  @include mixins.media-up(md) {
+    padding-top: calc(var(--spacing-xl) + 80px);
+    padding-bottom: var(--spacing-xl);
+  }
 }
 
 .header {
@@ -35,7 +40,7 @@
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: var(--spacing-md);
 
-  @include mixins.media-down(768px) {
+  @include mixins.media-down(md) {
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
   }

@@ -46,7 +46,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className={styles.testimonials} ref={sectionRef}>
+    <section id="testimonials" className={styles.testimonials} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Client Experiences</span>

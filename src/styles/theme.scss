@@ -33,6 +33,12 @@
   --transition-fast: #{$transition-fast};
   --transition-medium: #{$transition-medium};
   --transition-slow: #{$transition-slow};
+
+  // z-indexes
+  --z-index-back: #{$z-index-back};
+  --z-index-base: #{$z-index-base};
+  --z-index-nav: #{$z-index-nav};
+  --z-index-modal: #{$z-index-modal};
 }
 
 :root {

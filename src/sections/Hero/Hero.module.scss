@@ -8,14 +8,20 @@
   align-items: center;
   overflow: hidden;
   background-color: var(--color-background-light);
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
+  padding-top: calc(var(--spacing-lg) + 50px);
+  padding-bottom: var(--spacing-lg);
 
   /* Layered hero background: soft white gradient overlay above the image */
-  background-image: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.4)), var(--hero-bg);
+  background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.6)), var(--hero-bg);
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+
+  @include mixins.media-up(md) {
+    padding-top: calc(var(--spacing-xl) + 70px);
+    padding-bottom: var(--spacing-xl);
+    background-image: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.4)), var(--hero-bg);
+  }
 }
 
 .content {
@@ -26,8 +32,12 @@
 }
 
 .title {
-  max-width: 900px;
+  max-width: 100%;
   margin-bottom: var(--spacing-md);
+
+  @include mixins.media-up(md) {
+    max-width: 900px;
+  }
   
   .line {
     display: block;
@@ -47,16 +57,22 @@
 }
 
 .subtitle {
-  max-width: 600px;
-  font-size: var(--font-body-large);
+  max-width: 100%;
+  font-size: var(--font-body);
   color: var(--color-text-dark);
   margin-bottom: var(--spacing-lg);
   opacity: 0;
   transform: translateY(20px);
+
+  @include mixins.media-up(md) {
+    max-width: 600px;
+    font-size: var(--font-body-large);
+  }
 }
 
 .actions {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-sm);
   opacity: 0;
   transform: translateY(20px);
@@ -65,13 +81,22 @@
 .primaryBtn {
   background-color: var(--color-primary-navy);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--border-radius-sm);
   font-family: var(--font-stack-body);
   font-weight: 500;
   transition: background-color var(--transition-fast);
   text-decoration: none;
   display: inline-block;
+  text-align: center;
+  flex: 1;
+  min-width: 160px;
+
+  @include mixins.media-up(sm) {
+    flex: none;
+    min-width: auto;
+    padding: 1rem 2rem;
+  }
 
   &:hover {
     background-color: var(--color-primary-teal);
@@ -82,11 +107,19 @@
   background-color: transparent;
   color: var(--color-primary-navy);
   border: 1px solid var(--color-primary-navy);
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--border-radius-sm);
   font-family: var(--font-stack-body);
   font-weight: 500;
   transition: all var(--transition-fast);
+  flex: 1;
+  min-width: 160px;
+
+  @include mixins.media-up(sm) {
+    flex: none;
+    min-width: auto;
+    padding: 1rem 2rem;
+  }
 
   &:hover {
     background-color: var(--color-primary-navy);

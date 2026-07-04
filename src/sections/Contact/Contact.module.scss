@@ -19,7 +19,7 @@
   gap: var(--spacing-lg);
   align-items: center;
 
-  @include mixins.media-down(1024px) {
+  @include mixins.media-down(lg) {
     grid-template-columns: 1fr;
   }
 }
@@ -58,15 +58,24 @@
 }
 
 .formWrap {
+  width: 100%;
   max-width: 500px;
+
+  @include mixins.media-down(lg) {
+    max-width: 100%;
+  }
 }
 
 .form {
   background: white;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-sm);
+
+  @include mixins.media-up(md) {
+    padding: var(--spacing-lg);
+  }
 }
 
 .formHeader {

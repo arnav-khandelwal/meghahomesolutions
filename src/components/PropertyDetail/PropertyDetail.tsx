@@ -237,12 +237,12 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
                 Call Now
               </a>
               
-              <a href="https://wa.me/919910384484?text=Hi, I'm interested in the property: ${encodeURIComponent(property.title)}" target="_blank" rel="noopener noreferrer" className={styles.contactButton}>
+              <a href={`https://wa.me/919910384484?text=Hi, I'm interested in the property: ${encodeURIComponent(property.title)}`} target="_blank" rel="noopener noreferrer" className={styles.contactButton}>
                 <MessageCircle size={20} />
                 WhatsApp
               </a>
               
-              <a href="mailto:sulabh.hr@gmail.com?subject=Interest in property: ${encodeURIComponent(property.title)}" className={styles.contactButton}>
+              <a href={`mailto:sulabh.hr@gmail.com?subject=Interest in property: ${encodeURIComponent(property.title)}`} className={styles.contactButton}>
                 <Mail size={20} />
                 Send Email
               </a>

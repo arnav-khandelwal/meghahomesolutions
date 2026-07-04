@@ -35,7 +35,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section className={styles.contact} ref={sectionRef}>
+    <section id="contact" className={styles.contact} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.splitLayout}>
           <div className={styles.header}>
