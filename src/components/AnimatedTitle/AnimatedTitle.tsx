@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function AnimatedTitle({ as = 'h2', className = '', children }: Props) {
-  const rootRef = useRef<HTMLElement | null>(null);
+  const rootRef = useRef<HTMLHeadingElement | null>(null);
   const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
@@ -38,17 +38,27 @@ export default function AnimatedTitle({ as = 'h2', className = '', children }: P
     return () => ctx.revert();
   }, []);
 
-  const Tag = as as any;
-
   const childrenArray = Array.isArray(children) ? children : [children];
 
+  if (as === 'h1') {
+    return (
+      <h1 className={`${styles.animatedTitle} ${className}`} ref={rootRef}>
+        {childrenArray.map((child, i) => (
+          <span className={styles.line} key={i}>
+            <span ref={el => { linesRef.current[i] = el as HTMLSpanElement }}>{child}</span>
+          </span>
+        ))}
+      </h1>
+    );
+  }
+
   return (
-    <Tag className={`${styles.animatedTitle} ${className}`} ref={rootRef as any}>
+    <h2 className={`${styles.animatedTitle} ${className}`} ref={rootRef}>
       {childrenArray.map((child, i) => (
         <span className={styles.line} key={i}>
           <span ref={el => { linesRef.current[i] = el as HTMLSpanElement }}>{child}</span>
         </span>
       ))}
-    </Tag>
+    </h2>
   );
 }

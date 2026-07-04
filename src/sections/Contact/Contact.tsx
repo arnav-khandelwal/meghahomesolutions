@@ -51,7 +51,7 @@ export default function Contact() {
             <div className={styles.form}>
               <div className={styles.formHeader}>
                 <h3>Start a conversation</h3>
-                <p>Choose your preferred channel and we'll get back to you promptly.</p>
+                <p>Choose your preferred channel and we&apos;ll get back to you promptly.</p>
               </div>
 
               <div className={styles.actions}>

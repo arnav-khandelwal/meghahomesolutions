@@ -62,7 +62,7 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
       
       console.log('Submitting data:', payload);
       
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyhFhqG4tcCMFV1tYjhHPyifQpSMTq1kuUPwb7axgWhX0uTai-t4BlqugMDGhC2Hu3g/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbyhFhqG4tcCMFV1tYjhHPyifQpSMTq1kuUPwb7axgWhX0uTai-t4BlqugMDGhC2Hu3g/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
